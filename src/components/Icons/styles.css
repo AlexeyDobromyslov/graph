@@ -1,0 +1,18 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoArrow, .logoRun{
+    stroke: teal;
+}
+.logoRun{
+    fill:teal;
+}
+.logoArrow:active{
+    stroke: rgb(222,67,123);
+}
+.logoRun:active{
+    stroke: rgb(222,67,123);
+    fill:rgb(222,67,123);
+}

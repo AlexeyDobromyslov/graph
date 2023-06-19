@@ -1,0 +1,22 @@
+.area{
+    position: absolute;
+    background-color: #F5EEF8;
+    position: absolute;
+    top: 10%
+}
+.horline{
+    z-index: 1;
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 1px;
+    bottom: 0
+  }
+  .vertline{
+    z-index: 1;
+    position: absolute;
+    background: transparent;
+    width: 1px;
+    height: 100%;
+    right: 0;
+  }

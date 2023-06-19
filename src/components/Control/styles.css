@@ -1,0 +1,185 @@
+.controlButton, .controlInput{
+    border-radius: 5px;
+    margin: 0 10px;
+    height: 40px;
+    
+    background: white;
+    box-shadow: 0px 0px 3px 0px grey;
+}
+.controlButton{
+    width: 40px;
+}
+.controlInput,.controlProc{
+   
+    outline: none;
+    font-size: 16px;
+    
+    width: 160px;
+    color: teal
+}
+.controlInput{
+    border: none;
+    padding: 5px;
+    width: 160px;
+}
+.controlProc{
+    border: 1px solid teal;
+    padding: 1px;
+    width: 400px;
+    border-radius: 4px;
+    margin: 5px;
+}
+.controlButton:active{
+    
+    background: #fef7ff;
+    box-shadow: none;
+    
+    
+
+}
+.controlButton:hover, .controlInput:hover{
+    background: #fef7ff;
+    
+}
+.infoPaths{
+    
+    position: fixed;
+    width: 40%;
+    top: 10%;
+    right: 0px;
+    z-index: 5;
+    background: white;
+    border-radius: 0 0 0 25px;
+    box-shadow: 0px 0px 5px 0px #baa3c4;
+    padding-right: 8px;
+
+}
+.infoClose{
+    position: sticky;
+    top: 10px;
+    left: 97%;
+    background: transparent;
+    width: 30px
+}
+.infoTitle{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    font-size: 20px;
+    padding-top: 5px;
+   
+    color: teal
+
+}
+.infoContent{
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    position: relative;
+    color: teal;
+    width: max-content;
+}
+.infoTable{
+    
+    position: fixed;
+    width: 100%;
+    top: 10%;
+    height: 90%;
+    z-index: 5;
+    background: white;
+    overflow: auto;
+    padding-right: 10px;
+
+}
+td{
+    
+    padding: 3px 8px;
+text-align: center;
+letter-spacing: 1px;
+border-bottom: 2px solid teal;
+    border-right: 2px solid teal;
+white-space: nowrap;
+}
+table{
+    border-top: 2px solid teal;
+    border-left: 2px solid teal;
+    
+border-collapse: separate;
+position: relative;
+border-spacing: 0px;
+}
+
+.forHead,.forHeadLeftHead{
+    position: sticky;
+    top:0;
+    background-color: #bffcfb;
+
+}
+.forBottom,.forLeftBottom{
+    position: sticky;
+    bottom:0px;
+    border-top: 2px teal solid;
+}
+.forBottom{
+    background-color: white;
+}
+.forLeftHead,.forHeadLeftHead,.forLeftBottom{
+    position: sticky;
+    left:0;
+    background-color: #bffcfb;
+
+}
+.forHeadLeftHead, .forLeftBottom{
+    z-index: 8
+}
+.targetCrit{
+    background: #00AAAd;
+    color: white
+}
+.influence{
+    background: #e2fffe;
+}
+.borderBottomNone{
+    border-bottom: none !important
+}
+.forRandom{
+    background-color: #99a4da;
+    color: white
+}
+.forFinishNull{
+    background-color: #8b1c00;
+    color: white
+
+}
+.crites{
+    background-color: #ffe7d4;
+}
+
+
+
+
+.forTop,.forArcs,.forEmpty,.forTact{
+    
+    border-bottom: 2px solid teal;
+    border-right: 1px solid teal;
+    border-left: 1px solid teal;
+    min-width: 60px;
+}
+.forTop{
+    background-color: white;
+}
+
+.forEmpty{
+    background-color: #95b1b0;
+}
+.forTact{
+    background-color: #bffcfb;
+}
+.forTactHead{
+    border-top: none
+}
+.forArcs{
+    background-color: #ffe7d4;
+   
+}

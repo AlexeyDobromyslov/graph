@@ -1,0 +1,22 @@
+.control{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    box-shadow: 0px 2px 5px 0px #baa3c4;
+    background-color: #e0cee9;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 0px;
+    left: 0px;
+    height: 10%;
+    margin: 0px;
+    z-index: 6;
+    align-items: center;
+}
+.childControl{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+}
