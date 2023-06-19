@@ -244,7 +244,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               checked={checks.allowDelete} 
               onClick={()=>{SetChecks({...forChecks, allowDelete: !checks.allowDelete})}}/>
             <Setting content={
-              <div className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
+              <div title="перетащить шаблон" className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
               onDragStart={
                 (e)=>{
                   dragAdd(e)

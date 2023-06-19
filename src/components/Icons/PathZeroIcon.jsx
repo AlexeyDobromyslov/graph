@@ -9,7 +9,7 @@ const PathZeroIcon= function(props){
     const color=props.condition?"rgb(222,67,123)":"teal"
     
     return(
-      <div className='center'>
+      <div title="режим вывода" className='center'>
        
        <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="17" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>

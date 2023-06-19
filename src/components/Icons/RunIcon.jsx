@@ -7,7 +7,7 @@ import './styles.css'
 
 const RunIcon= function(props){
     return(
-      <div className='center' >
+      <div title="след. этап" className='center' >
 <svg className="logoRun" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <g>
             <circle cx="16" cy="16" fill="none"  r="10"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>

@@ -7,7 +7,7 @@ import './styles.css'
 
 const Bascet= function(props){
     return(
-      <div className='center' >
+      <div title="удалить граф" className='center' >
         <svg className='logoArrow' width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 11V17"  strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
 <path d="M14 11V17"  strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>

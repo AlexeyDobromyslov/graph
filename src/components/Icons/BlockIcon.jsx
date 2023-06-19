@@ -9,7 +9,7 @@ const BlockIcon= function(props){
     const color=props.condition?"rgb(222,67,123)":"teal"
     if(props.condition){
     return(
-      <div className='center'>
+      <div title="фиксировать дуги" className='center'>
         <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g>
           <rect fill="none" height="10" rx="2" ry="2" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" width="16" x="4" y="11"/>
@@ -22,7 +22,7 @@ const BlockIcon= function(props){
     )
 }else{
   return(
-    <div className='center'>
+    <div title="не фиксировать дуги" className='center'>
       <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g>
           <rect fill="none" height="10" rx="2" ry="2" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" width="16" x="4" y="11"/>

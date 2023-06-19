@@ -75,8 +75,9 @@ const Arrow= function(props){
     e.stopPropagation();
    }
    function notZero(e){ //обработчик события ухода с текстового поля
-    if(Number(e.target.value)<1&&!props.arrow.null){//если значение меньше единицы и эта
-                                                    //дуга не обнулена самой программой
+    if(Number(e.target.value)<1&&update){//если значение меньше единицы и эта
+                                                    
+      
       SetValue(1)
       props.arrow.value=1//установка значения равного единице
     }

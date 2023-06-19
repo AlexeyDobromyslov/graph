@@ -490,7 +490,7 @@ function clickUpload(){
         }
         })
         if(iter==8){
-          console.log(detect)
+          //console.log(detect)
         }
         prevBusesConds.map((prev,index)=>{
           let newCond

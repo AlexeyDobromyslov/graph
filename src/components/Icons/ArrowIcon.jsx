@@ -8,7 +8,7 @@ import './styles.css'
 const ArrowIcon= function(props){
     const color=props.condition?"rgb(222,67,123)":"teal"
     return(
-      <div className='center'>
+      <div title="добавить дугу" className='center'>
          
          <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <g>
