@@ -22,7 +22,7 @@ import { fromInputProc } from '../../functions/fromInputProc';
 const Practic= function(props){
   //объект состония флагов-режимов работы 
   const [checks,SetChecks]=useSessionStorage('checks',
-  {allowArrow: false, allowFix: false, tryToDragAdd: false, allowAdd: false,allowDelete: false,nameFile: "graph"})
+  {allowArrow: false, allowFix: false, tryToDragAdd: false, allowAdd: false,allowDelete: false,allowMove: false,nameFile: "graph"})
    //глобальный флаг разрешения редактирования времени
   const [update,SetUpdate]=useSessionStorage('update',true)
    const save=useRef()//ссылка на элемент <a>, позволяющий реализовать скачивание
@@ -724,6 +724,7 @@ function clickUpload(){
               checkDelete={checks.allowDelete} 
               try={checks.tryToDragAdd} 
               add={checks.allowAdd}
+              move={checks.allowMove}
               offset={offsetXY} 
               topLimit={topLimit}
               tops={tops} SetTops={SetTops}

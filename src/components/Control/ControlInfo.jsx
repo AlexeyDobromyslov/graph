@@ -65,8 +65,6 @@ const ControlInfo=({title, check, content})=>{
         return(
           <div className='infoPaths' style={infoStyle} >
                 <div className='infoTitle' >{title}</div>
-                 
-                
                 <div className='infoContent' style={heightChildPath}>
                 {content.data.map((path, index)=>{
                   return(<div key={index} style={{height: '38px'}}>

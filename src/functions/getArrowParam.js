@@ -37,7 +37,6 @@ export const getArrowParam=(arrow, condition, edge)=>{
   //определение катетов для расчета угла   
   a=x2-x1;
   b=y2-y1;
-
   //расчет угла поворота
   if(y2>y1){
       angle=Math.atan(-a/b);
@@ -52,7 +51,6 @@ export const getArrowParam=(arrow, condition, edge)=>{
           angle=-Math.PI/2
       }
   }
-
   if(arrow.deviation!=0){//если искривление не равно нулю
     let sin=Math.sin(angle)
     let cos=Math.cos(angle)

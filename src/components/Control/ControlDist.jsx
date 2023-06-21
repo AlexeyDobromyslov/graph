@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import'./styles.css';
-import ControlInput from './ControlInput';
 import ControlProc from './ControlProc';
 import ControlButton from './ControlButton';
 import LeftIcon from '../Icons/LeftIcon';
@@ -9,19 +8,10 @@ import { toInputProc } from '../../functions/toInputProc';
 
 const ControlDist=({title, check, topsDistribution,forDists,SetForDists})=>{
   let infoStyle={display: check?'':'none'}
-  
-  
-    
-    
     function defaultDist(){
       let defaultData=toInputProc(topsDistribution)
       SetForDists(defaultData)
     }
-  
-  
-   
-    
-     
         return(
           <div className='infoTable' style={infoStyle} >
                 <div className='infoTitle' >{title}</div>
@@ -54,8 +44,6 @@ const ControlDist=({title, check, topsDistribution,forDists,SetForDists})=>{
                 
               </div>
            );
-      
-      
 
 }
 

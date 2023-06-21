@@ -107,6 +107,35 @@ const Area= function({choiseTopIndex,SetChoiseTop,
       let y=pageY-topEdge//перевод координат
       return [x,y]
     }
+    function move(setx,sety,style0){
+      let nextId //переменная для хранения id перетаскивемой вершины
+      tops[choiseTopIndex]={...tops[choiseTopIndex], style: style0, x: setx, y: sety}//изменение к-т выбранной вершины
+      SetArrow({...arrow,x1: setx, y1: sety}) //изменение к-т начала потенциальной стрелки
+      SetTops([...tops])//сохранение изменений
+      nextId=tops[choiseTopIndex].id//сохранение id
+      if(!props.checkFix){//если фиксация стрелок у вершин выключена
+        SetArrows(arrows.filter(arrow=>arrow.id1!==nextId&&arrow.id2!==nextId))//удалить стрелку
+      }
+      else{
+        arrows.map(//цикл по массиву стрелок
+          arrow=>{
+            //если перемещена вершина начала стрелки
+            if(arrow.id1===nextId){
+              arrow.x1=setx
+              arrow.y1=sety
+            }
+            else{
+              //если перемещена вершина конца стрелки
+              if(arrow.id2===nextId){
+                arrow.x2=setx
+                arrow.y2=sety
+              }
+            }
+          }
+        )
+        SetArrows([...arrows])//сохранение измененного массива стрелок
+      }
+    }
     
     //обработчик события сброса элемента
     function drop(event){
@@ -116,7 +145,7 @@ const Area= function({choiseTopIndex,SetChoiseTop,
                                                                   //элемента при попытке перемещения                                                     
         let setx=x+topHalfSize //к-ты центра вершин
         let sety=y+topHalfSize
-        let nextId //переменная для хранения id перетаскивемой вершины
+       
 
         let style0={  //стиль, устанавливающий положение вершины
           top: `${y}px`,
@@ -126,32 +155,7 @@ const Area= function({choiseTopIndex,SetChoiseTop,
         if(checkEdge(x,y)){ //проверка пределов зоны
           if(!props.try){//если закончили перетаскивать и это не добавление
             if(tryToReplace){//проверка на то, что перетаскивали именно вершину
-              tops[choiseTopIndex]={...tops[choiseTopIndex], style: style0, x: setx, y: sety}//изменение к-т выбранной вершины
-              SetArrow({...arrow,x1: setx, y1: sety}) //изменение к-т начала потенциальной стрелки
-              SetTops([...tops])//сохранение изменений
-              nextId=tops[choiseTopIndex].id//сохранение id
-              if(!props.checkFix){//если фиксация стрелок у вершин выключена
-                SetArrows(arrows.filter(arrow=>arrow.id1!==nextId&&arrow.id2!==nextId))//удалить стрелку
-              }
-              else{
-                arrows.map(//цикл по массиву стрелок
-                  arrow=>{
-                    //если перемещена вершина начала стрелки
-                    if(arrow.id1===nextId){
-                      arrow.x1=setx
-                      arrow.y1=sety
-                    }
-                    else{
-                      //если перемещена вершина конца стрелки
-                      if(arrow.id2===nextId){
-                        arrow.x2=setx
-                        arrow.y2=sety
-                      }
-                    }
-                  }
-                )
-                SetArrows([...arrows])//сохранение измененного массива стрелок
-              }
+             move(setx,sety,style0)
               SetTry(false)//перемещение закончилось
             } 
           }
@@ -188,7 +192,7 @@ const Area= function({choiseTopIndex,SetChoiseTop,
       tops.map((top=>{top.error=false}))//проход по массиву вершин и сброс свойства ошибки у всех элементов
       SetTops([...tops])                //сохранение изменённого массива
 
-      if(props.add){//если режим добавления включен
+      if(props.add||props.move){//если режим добавления включен
         let [setx,sety]=convertXY(event.pageX,event.pageY)//нормализация координат центра вершины
         let x=setx-topHalfSize,y=sety-topHalfSize//получение координат для позиционирования
         if(!checkEdge(x,y)){//если в вершина выходит за границы зоны
@@ -202,7 +206,11 @@ const Area= function({choiseTopIndex,SetChoiseTop,
           top: `${y}px`,
           left: `${x}px`
         }
+        if(props.add){
         buildTop(setx,sety,style0)//построение новой вершины
+        }else{
+          move(setx,sety,style0)
+        }
         
       }
       else{

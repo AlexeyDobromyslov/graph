@@ -3,14 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: none;
-
 }
 #root{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 .App{
     width: 100%;

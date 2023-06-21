@@ -28,13 +28,14 @@ import PathZeroIcon from '../Icons/PathZeroIcon';
 import ControlDist from '../Control/ControlDist';
 import { toInputProc } from '../../functions/toInputProc';
 import ChoisePathIcon from '../Icons/ChoisePathIcon';
+import MoveIcon from '../Icons/MoveIcon';
 
 
 const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArrowIndex,
                              clear, edge, download,clickUpload, calculate,calculate2,calculate3}){
   //переменная для гибкого изменения режимов раьоты
   const forChecks={allowArrow: false, allowFix: checks.allowFix, tryToDragAdd: false, 
-                  allowAdd: false,allowDelete: false,fileName: checks.fileName}
+                  allowAdd: false,allowDelete: false,allowMove: false,fileName: checks.fileName}
 
   const topRef=useRef()//ссылка на элемент добавочной вершины
    const [stage,SetStage]=useSessionStorage('stage',1)//переменная состояния этапа приложения
@@ -243,6 +244,12 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               content={<DeleteIcon condition={checks.allowDelete}/>} 
               checked={checks.allowDelete} 
               onClick={()=>{SetChecks({...forChecks, allowDelete: !checks.allowDelete})}}/>
+
+            <Setting  
+              content={<MoveIcon condition={checks.allowMove}/>} 
+              checked={checks.allowMove} 
+              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
+
             <Setting content={
               <div title="перетащить шаблон" className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
               onDragStart={
@@ -300,6 +307,10 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
             <ControlButton 
               content={<BackIcon/>} 
               onClick={fromStage2}/>
+              <Setting  
+              content={<MoveIcon condition={checks.allowMove}/>} 
+              checked={checks.allowMove} 
+              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
             <ControlArrow 
               content={<LeftIcon/>} 
               onMouseDown={()=>{deviationRepeat(false)}} 
@@ -346,6 +357,10 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
             <ControlButton 
               content={<BackIcon/>} 
               onClick={fromStage3}/>
+              <Setting  
+              content={<MoveIcon condition={checks.allowMove}/>} 
+              checked={checks.allowMove} 
+              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
             <ControlArrow 
               content={<LeftIcon/>} 
               onMouseDown={()=>{deviationRepeat(false)}} 

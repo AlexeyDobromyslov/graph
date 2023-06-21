@@ -1,5 +1,4 @@
 import { convertToAdjacencyArray } from "./convertToAdjacencyArray"
-
 export const getAllPath=(tops,arrows)=>{
   let adjacencyArray=convertToAdjacencyArray(tops,arrows)//получение массива смежности
   const paths=[{//переменная массива объектов путей
@@ -8,7 +7,6 @@ export const getAllPath=(tops,arrows)=>{
                 pathLength: Number(tops[0].value),//длина пути
                 arrowIndexes:[]//массив индексов дуг в массиве дуг
               }]
-              
   let end=tops.length //длина массива объектов вершин равна индексу последнего элемента+1 
   let exit=false
   while(!exit){

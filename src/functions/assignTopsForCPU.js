@@ -23,11 +23,9 @@ export const assignTopsForCPU=(tops,nullConnect)=>{
           parentIndex=nullConnect[nullArcIndex].childIndex
           topConditions[parentIndex]=false
           connectConditions[nullArcIndex]=false
-        
         }
         forProcessors.push(nullPath)
       }
-        
       }
       topConditions.map((condition,index)=>{
         if(condition){
@@ -35,5 +33,4 @@ export const assignTopsForCPU=(tops,nullConnect)=>{
         }
       })
       return forProcessors
-    
 }

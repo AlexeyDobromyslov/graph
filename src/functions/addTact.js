@@ -1,11 +1,9 @@
-
 export const addTact=(table,data,tact)=>{
   let i=0
   let cell
   let dataCell
     data.map((element)=>{
       if(element){
-        
         if(element.type=="top"){
           cell={value: element.data, condition: 1}
         }else{
