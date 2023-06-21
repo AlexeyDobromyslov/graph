@@ -75,7 +75,7 @@ const Arrow= function(props){
     e.stopPropagation();
    }
    function notZero(e){ //обработчик события ухода с текстового поля
-    if(Number(e.target.value)<1&&update){//если значение меньше единицы и эта
+    if(Number(e.target.value)<1&&update){//если значение меньше единицы и это ввод пользователя
                                                     
       
       SetValue(1)
