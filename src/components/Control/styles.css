@@ -45,7 +45,7 @@
     
     position: fixed;
     width: 40%;
-    top: 10%;
+    top: 70px;
     right: 0px;
     z-index: 5;
     background: white;
@@ -84,7 +84,7 @@
     
     position: fixed;
     width: 100%;
-    top: 10%;
+    top: 70px;
     height: 90%;
     z-index: 5;
     background: white;
