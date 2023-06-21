@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import './styles.css'
 
-
-
-
-
 const LeftIcon= function(props){
     return(
       <div title="искривить дугу" className='center' >
@@ -14,12 +10,8 @@ const LeftIcon= function(props){
             <line fill="none"  strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.3" x1="28.5" x2="7.5" y1="18" y2="18"/>
           </g>
         </svg>
-        
       </div>
-
-
     )
-
 }
 export default LeftIcon;
 

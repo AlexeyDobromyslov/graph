@@ -1,28 +1,16 @@
 import React, {useState} from 'react';
 import './styles.css'
-
-
-
-
-
 const PathZeroIcon= function(props){
-    const color=props.condition?"rgb(222,67,123)":"teal"
-    
-    return(
-      <div title="режим вывода" className='center'>
-       
-       <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="17" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
-      <circle cx="7" cy="17" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
-      <path d="M 10 14 l 4 -4" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  const color=props.condition?"rgb(222,67,123)":"teal"
+  return(
+    <div title="режим вывода" className='center'>   
+      <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+        <circle cx="7" cy="17" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+        <path d="M 10 14 l 4 -4" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
-      
-      </div>
-
-
-    )
-
-
+    </div>
+  )
 }
 export default PathZeroIcon;
 

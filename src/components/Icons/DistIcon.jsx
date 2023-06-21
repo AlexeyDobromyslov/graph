@@ -1,32 +1,19 @@
 import React, {useState} from 'react';
 import './styles.css'
-
-
-
-
-
-const PathZeroIcon= function(props){
-    const color=props.condition?"rgb(222,67,123)":"teal"
-    
-    return(
-      <div title="распределение узлов" className='center'>
-       
-       <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="6" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
-      <circle cx="18" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
-      <circle cx="12" cy="18" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
-      <path d="M 9 7 l 5 0" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-     
+const DistIcon= function(props){
+  const color=props.condition?"rgb(222,67,123)":"teal"
+  return(
+    <div title="распределение узлов" className='center'>   
+      <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+        <circle cx="18" cy="7" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+        <circle cx="12" cy="18" fill="none" stroke={color}  r="3"   strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+        <path d="M 9 7 l 5 0" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
-      
-      </div>
-
-
-    )
-
-
+    </div>
+  )
 }
-export default PathZeroIcon;
+export default DistIcon;
 
 /*d="M8.12132 15.8787
 C 7.57843 15.3358 6.82843 15 6 15
