@@ -250,20 +250,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               checked={checks.allowMove} 
               onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
 
-            <Setting content={
-              <div title="перетащить шаблон" className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
-              onDragStart={
-                (e)=>{
-                  dragAdd(e)
-                }
-              }
-              onDragEnd={
-                ()=>{
-                  SetChecks({...checks, tryToDragAdd: false})
-                }
-              }>
-              </div>
-            }/>
+
             <ControlArrow 
               content={<LeftIcon/>} 
               onMouseDown={()=>{deviationRepeat(false)}} 
@@ -277,6 +264,20 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
            
           </div>
           <div className='childControl'>
+          <Setting content={
+              <div title="перетащить шаблон" className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
+              onDragStart={
+                (e)=>{
+                  dragAdd(e)
+                }
+              }
+              onDragEnd={
+                ()=>{
+                  SetChecks({...checks, tryToDragAdd: false})
+                }
+              }>
+              </div>
+            }/>
             <ControlInput 
               value={checks.fileName} 
               onChange={
