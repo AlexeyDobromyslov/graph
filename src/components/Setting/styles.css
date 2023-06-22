@@ -2,7 +2,7 @@
     border-radius: 5px;
     margin: 0 10px;
     height: 40px;
-    width: 40px;
+    width: 40px !important;
     display: flex;
     justify-content: center;
     align-items: center;
