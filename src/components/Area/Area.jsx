@@ -389,7 +389,7 @@ const Area= function({choiseTopIndex,SetChoiseTop,
       
    
     return(
-      <div className='forAreaShell'>
+      <div className={props.stage>1?'forAreaShell2':'forAreaShell'}>
       <div className='area' ref={areaRef} onClick={addClick} onDragOver={allowDrop}  onDrop={drop} style={areaStyle}>
       <TopList tops={tops} choise={choise} hide={hide}/>
       <ArrowList arrows={arrows} choise={arrowChoise} edge={[areaStyle.width, areaStyle.height]}/>

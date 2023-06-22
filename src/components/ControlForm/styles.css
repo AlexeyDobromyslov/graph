@@ -1,4 +1,4 @@
-.control{
+.control, .control2{
     position: fixed;
     width: 100%;
     display: flex;
@@ -13,10 +13,21 @@
     z-index: 6;
     align-items: center;
 }
-.childControl{
+.childControl, .childControl2{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 
+}
+@media screen and (max-width:900px){
+    .control{
+        flex-direction: column;
+        height: 140px;
+        padding: 15px 0px;
+    }
+    .childControl{
+        justify-content: start;
+        width:100%
+    }
 }

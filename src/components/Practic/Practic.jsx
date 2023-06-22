@@ -28,7 +28,7 @@ const Practic= function(props){
    const save=useRef()//ссылка на элемент <a>, позволяющий реализовать скачивание
    const upload=useRef()//ссылка на элемент ввода файла
    const form=useRef()//ссылка на скрытувю форму
-   
+   const [stage,SetStage]=useSessionStorage('stage',1)//переменная состояния этапа приложения
    const [Edge,SetEdge]=useState([0,0]);//параметры зоны, получаемы от компонента зоны
 
    //смещение внутри номинальной вершины, котора используется для добавления с помощью перетасивания
@@ -717,7 +717,8 @@ function clickUpload(){
               calculate={calculate}
               calculate2={calculate2}
               calculate3={calculate3}
-              edge={Edge}/>
+              edge={Edge}
+              stage={stage} SetStage={SetStage}/>
             <Area 
               checkArrow={checks.allowArrow} 
               checkFix={checks.allowFix} 
@@ -733,7 +734,8 @@ function clickUpload(){
               choiseArrowIndex={choiseArrowIndex} SetChoiseArrow={SetChoiseArrow}
               topHalfSize={topHalfSize}
               getEdge={getEdge}
-              getAreaRef={getAreaRef}/>
+              getAreaRef={getAreaRef}
+              stage={stage}/>
           </div>
         </div>
       </Context.Provider>

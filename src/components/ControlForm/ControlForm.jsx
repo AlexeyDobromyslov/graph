@@ -32,13 +32,13 @@ import MoveIcon from '../Icons/MoveIcon';
 
 
 const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArrowIndex,
-                             clear, edge, download,clickUpload, calculate,calculate2,calculate3}){
+                             clear, edge, download,clickUpload, calculate,calculate2,calculate3, stage, SetStage}){
   //переменная для гибкого изменения режимов раьоты
   const forChecks={allowArrow: false, allowFix: checks.allowFix, tryToDragAdd: false, 
                   allowAdd: false,allowDelete: false,allowMove: false,fileName: checks.fileName}
 
   const topRef=useRef()//ссылка на элемент добавочной вершины
-   const [stage,SetStage]=useSessionStorage('stage',1)//переменная состояния этапа приложения
+   
   const [pathes2,SetPathes2]=useSessionStorage('pathes2',[])//переменная хранения всех путей на этапе 2
   const [pathes3,SetPathes3]=useSessionStorage('pathes3',[])//переменная хранения всех путей на этапе 3
   const [nullArrows,SetNullArrows]=useSessionStorage('null',[])//массив индексов обнуленных дуг
@@ -302,8 +302,8 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
   if(stage==2){ //если второй этап выполнения программы
     return(
       <div>
-        <div className='control'>
-          <div className='childControl'>
+        <div className='control2'>
+          <div className='childControl2'>
             <ControlButton 
               content={<BackIcon/>} 
               onClick={fromStage2}/>
@@ -352,8 +352,8 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
   if(stage==3){//если третий этап выполнения программы
     return(
       <div>
-        <div className='control'>
-          <div className='childControl'>
+        <div className='control2'>
+          <div className='childControl2'>
             <ControlButton 
               content={<BackIcon/>} 
               onClick={fromStage3}/>
@@ -420,8 +420,8 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
   if(stage==4){
     return(
       <div>
-        <div className='control'>
-          <div className='childControl'>
+        <div className='control2'>
+          <div className='childControl2'>
             <ControlButton 
               content={<BackIcon/>} 
               onClick={fromStage4}/>
