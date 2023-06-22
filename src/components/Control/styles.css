@@ -68,7 +68,7 @@
     color: teal;
     width: max-content;
 }
-.infoTable{
+.infoTable,.infoTableDia{
     position: fixed;
     width: 100%;
     top: 55px;

@@ -79,7 +79,7 @@ const ControlInfo=({title, check, content})=>{
       }
       if(content.type=='table'||content.type=='diagrams'){
         return(
-          <div className='infoTable' style={infoStyle} >
+          <div className={content.type=='diagrams'?'infoTableDia': 'infoTable'} style={infoStyle} >
                 <div className='infoTitle' >{title}</div>
                  
                 <div className='infoContent'>
