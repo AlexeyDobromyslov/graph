@@ -274,9 +274,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               onMouseDown={()=>{deviationRepeat(true)}} 
               onMouseOut={stopDeviation} 
               onMouseUp={stopDeviation}/>
-            <ControlButton 
-              content={<RunIcon/>} 
-              onClick={toStage2}/>
+           
           </div>
           <div className='childControl'>
             <ControlInput 
@@ -293,6 +291,9 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
             <ControlButton 
               content={<BascetIcon/>} 
               onClick={clear}/>
+               <ControlButton 
+              content={<RunIcon/>} 
+              onClick={toStage2}/>
           </div>
         </div>
       </div>
