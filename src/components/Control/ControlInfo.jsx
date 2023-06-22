@@ -114,6 +114,7 @@ const ControlInfo=({title, check, content})=>{
                 <div className='footerForTable'>
 
                 </div>
+              
               </div>
            );
       }
