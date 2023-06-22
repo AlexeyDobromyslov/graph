@@ -20,11 +20,11 @@
     align-items: center;
 
 }
-@media screen and (orientation: portrait) and (max-width:900px){
+@media screen and ((orientation: portrait) or (max-width:850px)){
     .control{
         flex-direction: column;
-        height: 140px;
-        padding: 15px 0px;
+        height: 100px;
+        padding: 6px 0px;
     }
     .childControl{
         justify-content: start;

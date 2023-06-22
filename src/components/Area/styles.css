@@ -27,8 +27,8 @@
     position: absolute;
     bottom: 0;
   }
-  @media screen and (orientation: portrait) and (max-width:900px){
+  @media screen and ((orientation: portrait) or (max-width:850px)){
     .forAreaShell{
-      top: 140px;
+      top: 100px;
     }
   }
