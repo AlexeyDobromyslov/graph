@@ -354,11 +354,9 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
   if(stage==3){//если третий этап выполнения программы
     return(
       <div>
-        <div className='control2'>
-          <div className='childControl2'>
-            <ControlButton 
-              content={<BackIcon/>} 
-              onClick={fromStage3}/>
+        <div className='control'>
+          <div className='childControl'>
+           
               <Setting  
               content={<MoveIcon condition={checks.allowMove}/>} 
               checked={checks.allowMove} 
@@ -382,6 +380,13 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
                   }
               }/>
               
+              
+            
+          </div>
+          <div className='childControl'>
+          <ControlButton 
+              content={<BackIcon/>} 
+              onClick={fromStage3}/>
               <Setting  
               content={<DistIcon condition={showChecks.showDist}/>} 
               checked={showChecks.showDist} 
@@ -399,7 +404,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
                   nullCrites(!showChecks.showCrit)
                 }
               }/>
-            <ControlButton 
+              <ControlButton 
               content={<RunIcon/>} 
               onClick={toStage4}/>
           </div>
