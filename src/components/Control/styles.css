@@ -72,7 +72,7 @@
     position: fixed;
     width: 100%;
     top: 55px;
-    height: 90%;
+    bottom: 0px;
     z-index: 5;
     background: white;
     overflow: auto;
