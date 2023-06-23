@@ -245,10 +245,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               checked={checks.allowDelete} 
               onClick={()=>{SetChecks({...forChecks, allowDelete: !checks.allowDelete})}}/>
 
-            <Setting  
-              content={<MoveIcon condition={checks.allowMove}/>} 
-              checked={checks.allowMove} 
-              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
+
 
 
             <ControlArrow 
@@ -261,9 +258,16 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               onMouseDown={()=>{deviationRepeat(true)}} 
               onMouseOut={stopDeviation} 
               onMouseUp={stopDeviation}/>
+            <ControlButton 
+              content={<RunIcon/>} 
+              onClick={toStage2}/>
            
           </div>
           <div className='childControl'>
+          <Setting  
+              content={<MoveIcon condition={checks.allowMove}/>} 
+              checked={checks.allowMove} 
+              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
           <Setting content={
               <div title="перетащить шаблон" className='top top_select' style={{position: 'relative'}} ref={topRef} draggable="true" 
               onDragStart={
@@ -292,9 +296,7 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
             <ControlButton 
               content={<BascetIcon/>} 
               onClick={clear}/>
-               <ControlButton 
-              content={<RunIcon/>} 
-              onClick={toStage2}/>
+
           </div>
         </div>
       </div>
@@ -356,22 +358,10 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
       <div>
         <div className='control'>
           <div className='childControl'>
-           
-              <Setting  
-              content={<MoveIcon condition={checks.allowMove}/>} 
-              checked={checks.allowMove} 
-              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
-            <ControlArrow 
-              content={<LeftIcon/>} 
-              onMouseDown={()=>{deviationRepeat(false)}} 
-              onMouseOut={stopDeviation} 
-              onMouseUp={stopDeviation}/>
-            <ControlArrow 
-              content={<RightIcon/>} 
-              onMouseDown={()=>{deviationRepeat(true)}} 
-              onMouseOut={stopDeviation} 
-              onMouseUp={stopDeviation}/>
-            <Setting  
+          <ControlButton 
+              content={<BackIcon/>} 
+              onClick={fromStage3}/>
+          <Setting  
               content={<InfoIcon condition={showChecks.showInfo}/>} 
               checked={showChecks.showInfo} 
               onClick={
@@ -379,14 +369,6 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
                   SetShowChecks({...showChecks, showInfo: !showChecks.showInfo}) 
                   }
               }/>
-              
-              
-            
-          </div>
-          <div className='childControl'>
-          <ControlButton 
-              content={<BackIcon/>} 
-              onClick={fromStage3}/>
               <Setting  
               content={<DistIcon condition={showChecks.showDist}/>} 
               checked={showChecks.showDist} 
@@ -407,6 +389,32 @@ const ControlForm= function({checks,SetChecks,arrows, SetArrows, SetOf,choiseArr
               <ControlButton 
               content={<RunIcon/>} 
               onClick={toStage4}/>
+
+
+
+
+           
+
+
+              
+              
+            
+          </div>
+          <div className='childControl'>
+          <Setting  
+              content={<MoveIcon condition={checks.allowMove}/>} 
+              checked={checks.allowMove} 
+              onClick={()=>{SetChecks({...forChecks, allowMove: !checks.allowMove})}}/>
+            <ControlArrow 
+              content={<LeftIcon/>} 
+              onMouseDown={()=>{deviationRepeat(false)}} 
+              onMouseOut={stopDeviation} 
+              onMouseUp={stopDeviation}/>
+            <ControlArrow 
+              content={<RightIcon/>} 
+              onMouseDown={()=>{deviationRepeat(true)}} 
+              onMouseOut={stopDeviation} 
+              onMouseUp={stopDeviation}/>
           </div>
         </div>
         <ControlInfo 
